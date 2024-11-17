@@ -10,7 +10,7 @@ const Capability = () => {
         </h2>
 
         <div className="flex flex-col md:flex-row gap-6 justify-center items-center ">
-          <div className=" p-6  text-center flex-1">
+          <div className=" p-6  text-center flex-1   w-full">
             <h3 className="text-2xl font-bold text-gray-800  mb-3">
               UX/CX
             </h3>
@@ -21,7 +21,7 @@ const Capability = () => {
             </p>
           </div>
 
-          <div className=" p-6  text-center flex-1">
+          <div className=" p-6  text-center flex-1   w-full">
             <h3 className="text-2xl font-bold text-gray-800  mb-3">
               Product Design
             </h3>
@@ -36,7 +36,7 @@ const Capability = () => {
             </p>
           </div>
 
-          <div className=" p-6 d text-center flex-1">
+          <div className=" p-6 d text-center flex-1 w-full">
             <h3 className="text-2xl font-bold  mb-3">
               Development
             </h3>
