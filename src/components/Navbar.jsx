@@ -24,12 +24,12 @@ const Navbar = () => {
       }, [isDarkMode]);
   return (
    <>
-<nav className="bg-white-800 dark:bg-gray-900 " style={{boxShadow: "rgba(33, 35, 38, 0.1) 0px 10px 10px -10px"}}>
+<nav className="bg-white-800 dark:bg-gray-900 " style={{boxShadow: "rgba(33, 35, 38, 0.1) 0px 10px 10px -10px"}} id='home'>
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="flex items-center justify-between h-16 py-10">
       <div className="flex items-center">
-        <a href="#" className="text-lg font-bold text-blue-500">
-          MyLogo
+        <a href="#" className="text-lg font-extrabold text-blue-500 italic">
+          FreeLancer's
         </a>
       </div>
 
@@ -42,13 +42,13 @@ const Navbar = () => {
             Project
           </a>
           <a
-            href="#"
+            href="#capabilities"
             className="text-gray-400 hover:text-blue-500 px-3 py-2 rounded-md text-lg font-medium"
           >
             Capabilities
           </a>
           <a
-            href="#"
+            href="#contact"
             className="text-gray-400 hover:text-blue-500 px-3 py-2 rounded-md text-lg font-medium"
           >
             Contact
