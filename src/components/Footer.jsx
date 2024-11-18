@@ -2,19 +2,19 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-8">
+    <footer className="bg-white dark:bg-gray-800 text-white py-8">
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between px-4">
       {/* First Div - Info */}
       <div className="mb-8 md:mb-0">
-        <h3 className="text-lg font-semibold mb-4">Info</h3>
+        <h3 className="text-lg font-semibold mb-4 text-blue-600 dark:text-white ">Info</h3>
         <ul className="space-y-2">
-          <li className="text-gray-300">
+          <li className="text-gray-600 dark:text-gray-300">
             <strong>Address:</strong> Eash ram krishna nagar patna-27
           </li>
-          <li className="text-gray-300">
+          <li className="text-gray-600 dark:text-gray-300">
             <strong>Phone:</strong> +91 7070761869
           </li>
-          <li className="text-gray-300">
+          <li className="text-gray-600 dark:text-gray-300">
             <strong>Email:</strong> kumarvishwajeet076@gmail.com
           </li>
         </ul>
@@ -22,13 +22,13 @@ const Footer = () => {
   
       {/* Second Div - Terms and Conditions */}
       <div className="mb-8 md:mb-0">
-        <h3 className="text-lg font-semibold mb-4">Terms and Conditions</h3>
-        <p className="text-gray-300">© 2024 Copyright</p>
+        <h3 className="text-lg font-semibold mb-4 text-blue-600 dark:text-white">Terms and Conditions</h3>
+        <p className="text-gray-600 dark:text-gray-300">© 2024 Copyright</p>
       </div>
   
       {/* Third Div - Social Media Links */}
       <div className="flex space-x-4 items-center">
-  <h3 className="text-lg font-semibold">Follow Us</h3>
+  <h3 className="text-lg font-semibold text-blue-600 dark:text-white">Follow Us</h3>
   <div className="flex space-x-4">
     {/* GitHub */}
     <a

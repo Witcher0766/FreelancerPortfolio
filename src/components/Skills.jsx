@@ -25,8 +25,8 @@ const Skills = () => {
   return (
     <div className="container  max-w-7xl mx-auto p-6 flex flex-col md:flex-row justify-around items-center h-auto md:h-[75vh]">
     <div className="p-6 w-full  ">
-      <h1 className="text-3xl font-bold text-gray-800 text-center">Skills & Tools</h1>
-      <h2 className="text-lg text-gray-600 mt-2 text-center">
+      <h1 className="text-3xl font-bold text-gray-800 dark:text-white text-center">Skills & Tools</h1>
+      <h2 className="text-lg text-gray-600 dark:text-gray-300 mt-2 text-center">
         For those who know what they’re looking for..
       </h2>
 

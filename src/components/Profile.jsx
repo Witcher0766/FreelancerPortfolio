@@ -6,13 +6,13 @@ const Profile = () => {
     <>
       <div className="flex flex-col md:flex-row pt-20 items-center md:items-start justify-between md:justify-around max-w-7xl mx-auto p-4  h-auto md:h-[100vh] lg:h-[100vh]  ">
         <div className="md:w-3/5 md:pl-10 p-3 gap-3 flex flex-col justify-center md:text-left text-center md:h-[55vh] lg:h-[55vh]  ">
-          <p className="text-gray-500  font-semibold md:text-2xl sm:text-lg text-lg">
+          <p className="text-gray-500  dark:text-gray-300 font-semibold md:text-2xl sm:text-lg text-lg">
             Hi there, We're Freelancer's
           </p>
-          <p className="text-black  font-bold sm:text-2xl md:text-4xl text-2xl">
+          <p className="text-black dark:text-white  font-bold sm:text-2xl md:text-4xl text-2xl">
             UX/UI/Product Designer <br /> & Front-end developer
           </p>
-          <p className="text-gray-500 font-semibold md:text-2xl sm:text-lg text-sm">
+          <p className="text-gray-500 dark:text-gray-300 font-semibold md:text-2xl sm:text-lg text-sm">
             We specialize in designing and developing user-centric digital
             products and immersive experiences, empowering people and brands to
             achieve their goals with creativity and innovation.
