@@ -32,9 +32,10 @@ const Footer = () => {
   <div className="flex space-x-4">
     {/* GitHub */}
     <a
-      href="#"
+      href="https://github.com/Witcher0766"
       className="text-gray-500 hover:text-gray-900 dark:hover:text-gray-100"
       aria-label="GitHub"
+      target='_blank'
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -48,9 +49,10 @@ const Footer = () => {
 
     {/* LinkedIn */}
     <a
-      href="#"
+      href="https://www.linkedin.com/in/vishwajeet-kumar-8080a51bb/"
       className="text-gray-500 hover:text-blue-700"
       aria-label="LinkedIn"
+      target='_blank'
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -67,6 +69,7 @@ const Footer = () => {
       href="#"
       className="text-gray-500 hover:text-pink-600"
       aria-label="Instagram"
+      target='_blank'
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
