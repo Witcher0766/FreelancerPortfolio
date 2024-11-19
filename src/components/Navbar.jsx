@@ -117,13 +117,13 @@ const Navbar = () => {
           Project
         </a>
         <a
-          href="#"
+          href="#capabilities"
           className="text-gray-400 dark:text-white hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium"
         >
           Capabilities
         </a>
         <a
-          href="#"
+          href="#contact"
           className="text-gray-400 dark:text-white hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium"
         >
           Contact

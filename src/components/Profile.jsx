@@ -4,8 +4,8 @@ import gifImage from "../assets/png.png";
 const Profile = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row pt-20 items-center md:items-start justify-between md:justify-around max-w-7xl mx-auto p-4  h-auto md:h-[100vh] lg:h-[100vh]  ">
-        <div className="md:w-3/5 md:pl-10 p-3 gap-3 flex flex-col justify-center md:text-left text-center md:h-[55vh] lg:h-[55vh]  ">
+      <div className="flex flex-col md:flex-row pt-40 items-center md:items-start justify-between md:justify-around max-w-7xl mx-auto p-4  h-auto md:h-[100vh] lg:h-[100vh]  ">
+        <div className="md:w-3/5  md:pl-10 p-3 gap-3 flex flex-col justify-center md:text-left text-center md:h-[55vh] lg:h-[55vh]  ">
           <p className="text-gray-500  dark:text-gray-300 font-semibold md:text-2xl sm:text-lg text-lg">
             Hi there, We're Freelancer's
           </p>

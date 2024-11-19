@@ -11,10 +11,10 @@ function App() {
     <>
       <div className="main bg-white dark:bg-gray-900">
         <Navbar />
-        <Profile/>
-       <Capability/>
-       <Skills/>
-       <Contact/>
+        <Profile />
+        <Capability />
+        <Skills />
+        <Contact />
         <Footer />
       </div>
     </>
