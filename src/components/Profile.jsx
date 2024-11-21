@@ -1,10 +1,16 @@
 import React from "react";
 import gifImage from "../assets/png.png";
+import ParticleConfig from "./config/ParticleConfig";
+
 
 const Profile = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row pt-40 items-center md:items-start justify-between md:justify-around max-w-7xl mx-auto p-4  h-auto md:h-[100vh] lg:h-[100vh]  ">
+      <div className="flex flex-col md:flex-row pt-40 items-center md:items-start justify-between md:justify-around max-w-7xl mx-auto p-4  h-auto md:h-[100vh] lg:h-[100vh]  " id="parent-particles">
+        {/* Particle Background */}
+        {/* <div id="particles"> */}
+          <ParticleConfig />
+        {/* </div> */}
         <div className="md:w-3/5  md:pl-10 p-3 gap-3 flex flex-col justify-center md:text-left text-center md:h-[55vh] lg:h-[55vh]  ">
           <p className="text-gray-500  dark:text-gray-300 font-semibold md:text-2xl sm:text-lg text-lg">
             Hi there, We're Freelancer's
@@ -28,8 +34,6 @@ const Profile = () => {
             </a>
           </div>
         </div>
-
-        {/* Right Side */}
         <div className="md:w-2/5 mt-4 md:mt-0 flex justify-center h-auto ">
           <img
             src={gifImage}
