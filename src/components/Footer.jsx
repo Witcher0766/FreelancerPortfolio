@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-gray-800 text-white py-8">
+    <footer className="bg-white dark:bg-gray-800 text-white py-8 text-center">
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between px-4">
       {/* First Div - Info */}
       <div className="mb-8 md:mb-0">
@@ -27,7 +27,7 @@ const Footer = () => {
       </div>
   
       {/* Third Div - Social Media Links */}
-      <div className="flex space-x-4 items-center">
+      <div className="flex space-x-4 items-center text-center justify-center">
   <h3 className="text-lg font-semibold text-blue-600 dark:text-white">Follow Us</h3>
   <div className="flex space-x-4">
     {/* GitHub */}
@@ -66,7 +66,7 @@ const Footer = () => {
 
     {/* Instagram */}
     <a
-      href="#"
+      href="https://www.instagram.com/vishwajeet_kr076/?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D"
       className="text-gray-500 hover:text-pink-600"
       aria-label="Instagram"
       target='_blank'
