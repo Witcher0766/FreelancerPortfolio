@@ -2,13 +2,13 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-gray-800 text-white py-8 text-center">
+    <footer className="bg-white dark:bg-gray-800 text-white py-8 text-center md:text-left">
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between px-4">
       <div className="mb-8 md:mb-0">
         <h3 className="text-lg font-semibold mb-4 text-blue-600 dark:text-white ">Info</h3>
         <ul className="space-y-2">
           <li className="text-gray-600 dark:text-gray-300">
-            <strong>Address:</strong> Eash ram krishna nagar patna-27
+            <strong>Country:</strong> India
           </li>
           <li className="text-gray-600 dark:text-gray-300">
             <strong>Phone:</strong> +91 7070761869

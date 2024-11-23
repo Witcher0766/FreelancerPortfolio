@@ -86,9 +86,11 @@ const Profile = () => {
           transition={{ duration: 0.5, delay: 0.8 }}
           
         >
+        <a href="#projects">
           <button className="sm:px-6 px-4 py-2 text-xs sm:text-lg bg-blue-500 text-white font-semibold rounded-3xl shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
             View my work
           </button>
+          </a>
           <a href="#contact">
             <button className="sm:px-6 px-4 py-2 text-xs sm:text-lg bg-green-500 text-white font-semibold rounded-3xl shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
               Hire Us

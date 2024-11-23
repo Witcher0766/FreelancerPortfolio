@@ -53,7 +53,7 @@ const Navbar = () => {
             <div className="hidden md:block">
               <div className="flex items-center space-x-4">
                 <a
-                  href="#"
+                  href="#projects"
                   className="text-gray-400 dark:text-white hover:text-blue-500 px-3 py-2 rounded-md text-lg font-medium"
                 >
                   Project

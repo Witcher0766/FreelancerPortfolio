@@ -1,17 +1,21 @@
 import React from "react";
-import project1 from "../assets/project-1.png";
-import project2 from "../assets/project-2.png";
-import project3 from "../assets/project-3.png";
-import project4 from "../assets/project-4.png";
-import project5 from "../assets/project-5.png";
+import project1 from "../assets/project-1.jpg";
+import project2 from "../assets/project-2.jpg";
+import project3 from "../assets/project-3.jpg";
+import project4 from "../assets/project-4.jpg";
+import project5 from "../assets/project-5.jpg";
+import project6 from "../assets/project-6.jpg";
+import project7 from "../assets/project-7.jpg";
+import project8 from "../assets/project-8.jpg";
+
 import { motion } from "framer-motion";
 
 
 const Project = () => {
   return (
     <>
-    <div className="border-t border-b border-gray-300 py-20">
-      <div className="max-w-7xl mx-auto p-6" id="capabilities">
+    <div className="border-t border-b border-gray-300 py-20" id="projects">
+      <div className="max-w-7xl mx-auto p-6" >
         <motion.div
           className="d-flex flex-col justify-center text-center"
           initial={{ opacity: 0, y: 50 }}
@@ -35,6 +39,11 @@ const Project = () => {
             { src: project2, height: '20rem' },
             { src: project3, height: '24rem' },
             { src: project4, height: '20rem' },
+            { src: project5, height: '20rem' },
+            { src: project6, height: '20rem' },
+            { src: project7, height: '20rem' },
+            { src: project8, height: '20rem' },
+
           ].map((project, index) => (
             <motion.div
               key={index}

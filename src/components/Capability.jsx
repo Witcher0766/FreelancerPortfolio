@@ -53,8 +53,8 @@ const Capability = () => {
       </div>
       </div> */}
 
-      <div className="border-t border-b border-gray-300">
-      <div className="max-w-7xl mx-auto p-6" id="capabilities">
+      <div className="border-t border-b border-gray-300" id="capabilities">
+      <div className="max-w-7xl mx-auto p-6" >
         <h2 className="text-center text-4xl font-bold text-gray-800 dark:text-white mb-10">
           Capabilities
         </h2>
