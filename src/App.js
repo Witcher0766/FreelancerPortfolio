@@ -16,7 +16,7 @@ function App() {
     <Profile />
     <Project />
     <Capability />
-    {/* <Skills /> */}
+    <Skills />
     <Contact />
   </div>
   <Footer />
