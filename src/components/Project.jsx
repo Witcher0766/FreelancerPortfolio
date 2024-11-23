@@ -6,7 +6,6 @@ import project4 from "../assets/project-4.jpg";
 import project5 from "../assets/project-5.jpg";
 import project6 from "../assets/project-6.jpg";
 import project7 from "../assets/project-7.jpg";
-import project8 from "../assets/project-8.jpg";
 
 import { motion } from "framer-motion";
 
@@ -42,7 +41,6 @@ const Project = () => {
             { src: project5, height: '20rem' },
             { src: project6, height: '20rem' },
             { src: project7, height: '20rem' },
-            { src: project8, height: '20rem' },
 
           ].map((project, index) => (
             <motion.div
