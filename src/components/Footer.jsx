@@ -4,7 +4,6 @@ const Footer = () => {
   return (
     <footer className="bg-white dark:bg-gray-800 text-white py-8 text-center">
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between px-4">
-      {/* First Div - Info */}
       <div className="mb-8 md:mb-0">
         <h3 className="text-lg font-semibold mb-4 text-blue-600 dark:text-white ">Info</h3>
         <ul className="space-y-2">
@@ -19,18 +18,16 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-  
-      {/* Second Div - Terms and Conditions */}
+ 
       <div className="mb-8 md:mb-0">
         <h3 className="text-lg font-semibold mb-4 text-blue-600 dark:text-white">Terms and Conditions</h3>
         <p className="text-gray-600 dark:text-gray-300">© 2024 Copyright</p>
       </div>
   
-      {/* Third Div - Social Media Links */}
       <div className="flex space-x-4 items-center text-center justify-center">
   <h3 className="text-lg font-semibold text-blue-600 dark:text-white">Follow Us</h3>
   <div className="flex space-x-4">
-    {/* GitHub */}
+  
     <a
       href="https://github.com/Witcher0766"
       className="text-gray-500 hover:text-gray-900 dark:hover:text-gray-100"
@@ -47,7 +44,7 @@ const Footer = () => {
       </svg>
     </a>
 
-    {/* LinkedIn */}
+ 
     <a
       href="https://www.linkedin.com/in/vishwajeet-kumar-8080a51bb/"
       className="text-gray-500 hover:text-blue-700"
