@@ -10,15 +10,18 @@ import Project from "./components/Project";
 function App() {
   return (
     <>
-      <div className="main bg-white dark:bg-gray-900">
-        <Navbar />
-        <Profile />
-        <Project/>
-        <Capability />
-        <Skills />
-        <Contact />
-        <Footer />
-      </div>
+     <div className="main bg-white dark:bg-gray-900 w-full min-h-screen flex flex-col">
+  <Navbar />
+  <div className="flex-grow">
+    <Profile />
+    <Project />
+    <Capability />
+    {/* <Skills /> */}
+    <Contact />
+  </div>
+  <Footer />
+</div>
+
     </>
   );
 }
