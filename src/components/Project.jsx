@@ -82,14 +82,14 @@ const Project = () => {
                     src={project.src}
                     alt={project.alt}
                   />
-                  <div className="p-4 bg-white dark:bg-gray-800">
+                  {/* <div className="p-4 bg-white dark:bg-gray-800">
                     <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
                       {project.alt}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300">
                       Description of the project goes here.
                     </p>
-                  </div>
+                  </div> */}
                 </motion.div>
               </SwiperSlide>
             ))}

@@ -8,13 +8,6 @@ const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     return localStorage.getItem("darkMode") === "true";
   });
-  // const toggleDarkMode = () => {
-  //   setIsDarkMode((prev) => {
-  //     const newMode = !prev;
-  //     localStorage.setItem("darkMode", newMode);
-  //     return newMode;
-  //   });
-  // };
 
   const handleCheckboxChange = () => {
     setIsDarkMode((prev) => {
@@ -44,12 +37,17 @@ const Navbar = () => {
             <div className="flex items-center">
               <a
                 href="#"
-                className="text-lg font-extrabold text-blue-500 italic"
+                className="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-purple-400 hover:from-blue-700 hover:to-purple-700 dark:hover:from-blue-300 dark:hover:to-purple-300 transition-all duration-500 transform hover:scale-105 hover:rotate-1"
+                style={{
+                  fontFamily: "'Poppins', sans-serif",
+                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
+                  letterSpacing: "-0.05em",
+                }}
               >
-                FreeLancer's
+                SkillForge
               </a>
             </div>
-
+            {/* (professional and skill-focused) */}
             <div className="hidden md:block">
               <div className="flex items-center space-x-4">
                 <a
@@ -70,71 +68,6 @@ const Navbar = () => {
                 >
                   Contact
                 </a>
-                {/* <div className="flex items-center"> */}
-                  {/* <button
-              onClick={toggleDarkMode}
-              className="bg-gray-700 dark:bg-gray-600 text-gray-300 dark:text-gray-100 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-600 dark:hover:bg-gray-500"
-            >
-              {isDarkMode ? "Light Mode" : "Dark Mode"}
-            </button> */}
-
-                  {/* <label
-                    className="relative inline-flex cursor-pointer items-center"
-                    aria-label="Toggle Theme"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={isChecked}
-                      onChange={handleCheckboxChange}
-                      className="sr-only"
-                    />
-                    <div
-                      style={{ transition: "all 0.3s" }}
-                      className={`flex h-[30px] w-[63px] items-center rounded-2xl p-1 bg-yellow-400 dark:bg-gray-700 shadow-card  ${
-                        isChecked ? "bg-yellow-400" : "bg-gray-700"
-                      }`}
-                    >
-                      <span
-                        style={{ transition: "all 0.3s" }}
-                        className={`flex h-5 w-5 items-center justify-center rounded-full bg-white dark:bg-black  ${
-                          isChecked ? "translate-x-[36px]" : "translate-x-0"
-                        }`}
-                      >
-                        {isChecked ? (
-                          <svg
-                            width="16"
-                            height="16"
-                            viewBox="0 0 16 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M8.0547 1.67334C8.18372 1.90227 8.16622 2.18562 8.01003 2.39693..."
-                              fill="currentColor"
-                            ></path>
-                          </svg>
-                        ) : (
-                          <svg
-                            width="16"
-                            height="16"
-                            viewBox="0 0 16 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M8 0C8.36819 0 8.66667 0.298477 8.66667 0.666667V2C..."
-                              fill="currentColor"
-                            ></path>
-                          </svg>
-                        )}
-                      </span>
-                    </div>
-                  </label>
-                </div> */}
               </div>
             </div>
 
@@ -202,64 +135,6 @@ const Navbar = () => {
               >
                 Contact
               </a>
-              {/* <div className="block px-3 py-2  text-base font-medium">
-                <label
-                  className="relative inline-flex cursor-pointer items-center"
-                  aria-label="Toggle Theme"
-                >
-                  <input
-                    type="checkbox"
-                    checked={isChecked}
-                    onChange={handleCheckboxChange}
-                    className="sr-only"
-                  />
-                  <div
-                    style={{ transition: "all 0.3s" }}
-                    className={`flex h-[30px] w-[63px] items-center rounded-2xl p-1 bg-yellow-400 dark:bg-gray-700 shadow-card  ${
-                      isChecked ? "bg-yellow-400" : "bg-gray-700"
-                    }`}
-                  >
-                    <span
-                      style={{ transition: "all 0.3s" }}
-                      className={`flex h-5 w-5 items-center justify-center rounded-full bg-white dark:bg-black  ${
-                        isChecked ? "translate-x-[36px]" : "translate-x-0"
-                      }`}
-                    >
-                      {isChecked ? (
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            clipRule="evenodd"
-                            d="M8.0547 1.67334C8.18372 1.90227 8.16622 2.18562 8.01003 2.39693..."
-                            fill="currentColor"
-                          ></path>
-                        </svg>
-                      ) : (
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            clipRule="evenodd"
-                            d="M8 0C8.36819 0 8.66667 0.298477 8.66667 0.666667V2C..."
-                            fill="currentColor"
-                          ></path>
-                        </svg>
-                      )}
-                    </span>
-                  </div>
-                </label>
-              </div> */}
             </div>
           </div>
         )}
