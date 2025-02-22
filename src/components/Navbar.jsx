@@ -35,7 +35,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className="bg-white bg-opacity-100 dark:bg-gray-900 fixed top-0 w-full z-50 "
+        className="border-gray-300 bg-gradient-to-br from-gray-50 to-gray-100 bg-opacity-100 dark:bg-gray-900 fixed top-0 w-full z-50 "
         style={{ boxShadow: "rgba(33, 35, 38, 0.1) 0px 10px 10px -10px" }}
         id="home"
       >
@@ -70,7 +70,7 @@ const Navbar = () => {
                 >
                   Contact
                 </a>
-                <div className="flex items-center">
+                {/* <div className="flex items-center"> */}
                   {/* <button
               onClick={toggleDarkMode}
               className="bg-gray-700 dark:bg-gray-600 text-gray-300 dark:text-gray-100 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-600 dark:hover:bg-gray-500"
@@ -78,7 +78,7 @@ const Navbar = () => {
               {isDarkMode ? "Light Mode" : "Dark Mode"}
             </button> */}
 
-                  <label
+                  {/* <label
                     className="relative inline-flex cursor-pointer items-center"
                     aria-label="Toggle Theme"
                   >
@@ -134,7 +134,7 @@ const Navbar = () => {
                       </span>
                     </div>
                   </label>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -202,7 +202,7 @@ const Navbar = () => {
               >
                 Contact
               </a>
-              <div className="block px-3 py-2  text-base font-medium">
+              {/* <div className="block px-3 py-2  text-base font-medium">
                 <label
                   className="relative inline-flex cursor-pointer items-center"
                   aria-label="Toggle Theme"
@@ -259,7 +259,7 @@ const Navbar = () => {
                     </span>
                   </div>
                 </label>
-              </div>
+              </div> */}
             </div>
           </div>
         )}

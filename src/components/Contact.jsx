@@ -6,7 +6,7 @@ const Contact = () => {
      <div className="border-t border-b border-gray-300">
   <div class="container max-w-7xl mx-auto p-6 flex flex-col md:flex-row justify-around items-center h-auto md:h-[45vh]" id="contact">
     <div class="flex flex-col gap-3 text-center md:text-left p-4">
-      <p class="text-gray-800 dark:text-white font-bold md:text-4xl text-2xl">
+      <p class="text-gray-800 dark:text-white bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent font-bold md:text-4xl text-2xl">
         In need of a designer/developer?
       </p>
       <p class="text-blue-500 md:text-2xl text-lg font-medium">

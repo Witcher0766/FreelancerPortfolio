@@ -10,7 +10,7 @@ import Project from "./components/Project";
 function App() {
   return (
     <>
-     <div className="main bg-white dark:bg-gray-900 w-full min-h-screen flex flex-col">
+     <div className="main border-gray-300 bg-gradient-to-br from-gray-50 to-gray-100 dark:bg-gray-900 w-full min-h-screen flex flex-col">
   <Navbar />
   <div className="flex-grow">
     <Profile />
