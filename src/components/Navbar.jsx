@@ -5,26 +5,27 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
 
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    return localStorage.getItem("darkMode") === "true";
-  });
+  const isDarkMode = false;
+  // const [isDarkMode, setIsDarkMode] = useState(() => {
+  //   return localStorage.getItem("darkMode") === "true";
+  // });
 
-  const handleCheckboxChange = () => {
-    setIsDarkMode((prev) => {
-      setIsChecked(!isChecked);
-      const newMode = !prev;
-      localStorage.setItem("darkMode", newMode);
-      return newMode;
-    });
-  };
+  // const handleCheckboxChange = () => {
+  //   setIsDarkMode((prev) => {
+  //     setIsChecked(!isChecked);
+  //     const newMode = !prev;
+  //     localStorage.setItem("darkMode", newMode);
+  //     return newMode;
+  //   });
+  // };
 
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [isDarkMode]);
+  // useEffect(() => {
+  //   if (isDarkMode) {
+  //     document.documentElement.classList.add("dark");
+  //   } else {
+  //     document.documentElement.classList.remove("dark");
+  //   }
+  // }, [isDarkMode]);
   return (
     <>
       <nav
