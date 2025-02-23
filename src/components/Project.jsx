@@ -7,13 +7,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // Import project images
-import project1 from "../assets/project-1.jpg";
-import project2 from "../assets/project-2.jpg";
+import project4 from "../assets/project-1.jpg";
+import project5 from "../assets/project-2.jpg";
 import project3 from "../assets/project-3.jpg";
-import project4 from "../assets/project-4.jpg";
-import project5 from "../assets/project-5.jpg";
-import project6 from "../assets/project-6.jpg";
-import project7 from "../assets/project-7.jpg";
+import project1 from "../assets/project-4.JPG";
+import project2 from "../assets/project-5.JPG";
 
 const Project = () => {
   const projects = [
@@ -22,8 +20,6 @@ const Project = () => {
     { src: project3, alt: "Project 3" },
     { src: project4, alt: "Project 4" },
     { src: project5, alt: "Project 5" },
-    { src: project6, alt: "Project 6" },
-    { src: project7, alt: "Project 7" },
   ];
 
   return (

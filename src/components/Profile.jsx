@@ -46,7 +46,7 @@ const Profile = () => {
               View my work
             </button>
           </a>
-          <a href="https://www.upwork.com/freelancers/~0172e5f8e76e258bcb" target="_blank" rel="noreferrer">
+          <a href="https://www.upwork.com/freelancers/~0172e5f8e76e258bcb?mp_source=share" target="_blank" rel="noreferrer">
             <button className="sm:px-8 px-6 py-3 text-sm sm:text-lg bg-green-600 text-white font-semibold rounded-full shadow-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-75 transition-all duration-300 transform hover:scale-105">
               Hire me
             </button>
