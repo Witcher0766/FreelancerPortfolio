@@ -119,7 +119,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 items-center text-center">
               <a
-                href="#"
+                href="#projects"
                 className="text-gray-400 dark:text-white hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium"
               >
                 Project
