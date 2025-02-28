@@ -10,13 +10,9 @@ import "swiper/css/pagination";
 import project4 from "../assets/project-1.jpg";
 import project5 from "../assets/project-2.jpg";
 import project3 from "../assets/project-3.jpg";
-import project1 from "../assets/project-4.JPG";
-import project2 from "../assets/project-5.JPG";
 
 const Project = () => {
   const projects = [
-    { src: project1, alt: "Project 1" },
-    { src: project2, alt: "Project 2" },
     { src: project3, alt: "Project 3" },
     { src: project4, alt: "Project 4" },
     { src: project5, alt: "Project 5" },
