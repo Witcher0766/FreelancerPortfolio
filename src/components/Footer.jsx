@@ -25,7 +25,7 @@ const Footer = () => {
       </div>
   
       <div className="flex space-x-4 items-center text-center justify-center">
-  <h3 className="text-lg font-semibold text-blue-600 dark:text-white">Follow Us</h3>
+  <h3 className="text-lg font-semibold text-blue-600 dark:text-white">Follow Me</h3>
   <div className="flex space-x-4">
   
     <a

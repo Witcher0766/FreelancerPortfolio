@@ -25,7 +25,7 @@ const Profile = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          UX/UI/Product Designer <br /> & Front-end Developer
+          Full Stack Web <br /> & App Developer
         </motion.h1>
         <motion.p
           className="text-gray-600 dark:text-gray-300 font-medium md:text-xl sm:text-lg text-sm mt-4"
@@ -33,7 +33,7 @@ const Profile = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          I am specialize in designing and developing user-centric digital products and immersive experiences, empowering people and brands to achieve their goals with creativity and innovation.
+         I specialize in developing user-centric web and app solutions, creating immersive digital experiences that empower individuals and brands to achieve their goals through creativity, innovation, and cutting-edge technology.
         </motion.p>
         <motion.div
           className="flex gap-5 pt-4 text-center justify-center md:justify-start"

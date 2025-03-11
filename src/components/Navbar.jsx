@@ -38,14 +38,14 @@ const Navbar = () => {
             <div className="flex items-center">
               <a
                 href="#"
-                className="text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-purple-400 hover:from-blue-700 hover:to-purple-700 dark:hover:from-blue-300 dark:hover:to-purple-300 transition-all duration-500 transform hover:scale-105 hover:rotate-1"
+                className="text-2xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-purple-400 hover:from-blue-700 hover:to-purple-700 dark:hover:from-blue-300 dark:hover:to-purple-300 transition-all duration-500 transform hover:scale-105 hover:rotate-1"
                 style={{
                   fontFamily: "'Poppins', sans-serif",
                   textShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
                   letterSpacing: "-0.05em",
                 }}
               >
-                SkillForge
+                FreelanceNest
               </a>
             </div>
             {/* (professional and skill-focused) */}
