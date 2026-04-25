@@ -6,21 +6,31 @@ import Capability from "./components/Capability";
 import Contact from "./components/Contact";
 import Skills from "./components/Skills";
 import Project from "./components/Project";
+import About from "./components/About";
+import WorkExperience from "./components/WorkExperience";
+
+const globalStyles = `
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: #090b16; color: #f1f5f9; }
+`;
 
 function App() {
   return (
     <>
-     <div className="main border-gray-300 bg-gradient-to-br from-gray-50 to-gray-100 dark:bg-gray-900 w-full min-h-screen flex flex-col">
-  <Navbar />
-  <div className="flex-grow">
-    <Profile />
-    <Project />
-    <Capability />
-    <Skills />
-    <Contact />
-  </div>
-  <Footer />
-</div>
+     <style>{globalStyles}</style>
+      <div style={{ background: "#090b16", minHeight: "100vh" }}>
+        <Navbar />
+        <Profile />
+        <About />
+        <Skills />
+        <WorkExperience />
+        <Project />
+        <Capability />
+        <Contact />
+        <Footer />
+      </div>
 
     </>
   );

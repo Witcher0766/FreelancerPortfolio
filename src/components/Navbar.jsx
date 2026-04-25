@@ -1,146 +1,203 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isChecked, setIsChecked] = useState(false);
 
-  const isDarkMode = false;
-  // const [isDarkMode, setIsDarkMode] = useState(() => {
-  //   return localStorage.getItem("darkMode") === "true";
-  // });
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  // const handleCheckboxChange = () => {
-  //   setIsDarkMode((prev) => {
-  //     setIsChecked(!isChecked);
-  //     const newMode = !prev;
-  //     localStorage.setItem("darkMode", newMode);
-  //     return newMode;
-  //   });
-  // };
+  const links = ["About", "Skills", "Experience", "Projects", "Capabilities", "Contact"];
 
-  // useEffect(() => {
-  //   if (isDarkMode) {
-  //     document.documentElement.classList.add("dark");
-  //   } else {
-  //     document.documentElement.classList.remove("dark");
-  //   }
-  // }, [isDarkMode]);
   return (
-    <>
-      <nav
-        className="border-gray-300 bg-gradient-to-br from-gray-50 to-gray-100 bg-opacity-100 dark:bg-gray-900 fixed top-0 w-full z-50 "
-        style={{ boxShadow: "rgba(33, 35, 38, 0.1) 0px 10px 10px -10px" }}
-        id="home"
+    <nav
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 100,
+        background: scrolled ? "rgba(9,11,22,0.92)" : "transparent",
+        backdropFilter: scrolled ? "blur(16px)" : "none",
+        borderBottom: scrolled ? "1px solid rgba(99,102,241,0.15)" : "none",
+        transition: "all 0.3s ease",
+        padding: "0 clamp(1rem, 5vw, 3rem)",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: 1200,
+          margin: "0 auto",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          height: 64,
+        }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 py-10">
-            <div className="flex items-center">
-              <a
-                href="#"
-                className="text-2xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-purple-400 hover:from-blue-700 hover:to-purple-700 dark:hover:from-blue-300 dark:hover:to-purple-300 transition-all duration-500 transform hover:scale-105 hover:rotate-1"
-                style={{
-                  fontFamily: "'Poppins', sans-serif",
-                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
-                  letterSpacing: "-0.05em",
-                }}
-              >
-                FreelanceNest
-              </a>
-            </div>
-            {/* (professional and skill-focused) */}
-            <div className="hidden md:block">
-              <div className="flex items-center space-x-4">
-                <a
-                  href="#projects"
-                  className="text-gray-400 dark:text-white hover:text-blue-500 px-3 py-2 rounded-md text-lg font-medium"
-                >
-                  Project
-                </a>
-                <a
-                  href="#capabilities"
-                  className="text-gray-400 dark:text-white hover:text-blue-500 px-3 py-2 rounded-md text-lg font-medium"
-                >
-                  Capabilities
-                </a>
-                <a
-                  href="#contact"
-                  className="text-gray-400 dark:text-white hover:text-blue-500 px-3 py-2 rounded-md text-lg font-medium"
-                >
-                  Contact
-                </a>
-              </div>
-            </div>
+        {/* Logo */}
+        <a
+          href="#hero"
+          style={{
+            fontFamily: "'Syne', sans-serif",
+            fontSize: "1.3rem",
+            fontWeight: 800,
+            color: "#f1f5f9",
+            textDecoration: "none",
+            letterSpacing: "-0.04em",
+          }}
+        >
+          VK<span style={{ color: "#6366f1" }}>.</span>
+        </a>
 
-            <div className="-mr-2 flex md:hidden">
-              <button
-                type="button"
-                className=" inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-blue-500  "
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              >
-                <span className="sr-only">Open main menu</span>
-                {isMobileMenuOpen ? (
-                  <svg
-                    className="h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    className="h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 6h16M4 12h16m-7 6h7"
-                    />
-                  </svg>
-                )}
-              </button>
-            </div>
-          </div>
+        {/* Desktop Links */}
+        <div
+          style={{
+            display: "flex",
+            gap: "0.25rem",
+            alignItems: "center",
+          }}
+          className="nav-desktop"
+        >
+          {links.map((l) => (
+            <a
+              key={l}
+              href={`#${l.toLowerCase()}`}
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: "0.875rem",
+                fontWeight: 500,
+                color: "#94a3b8",
+                textDecoration: "none",
+                padding: "6px 12px",
+                borderRadius: 8,
+                transition: "color 0.2s, background 0.2s",
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.color = "#f1f5f9";
+                e.target.style.background = "rgba(99,102,241,0.12)";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.color = "#94a3b8";
+                e.target.style.background = "transparent";
+              }}
+            >
+              {l}
+            </a>
+          ))}
+          <a
+            href="mailto:kumarvishwajeet076@gmail.com"
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: "0.875rem",
+              fontWeight: 600,
+              color: "#f1f5f9",
+              textDecoration: "none",
+              padding: "7px 18px",
+              background: "#6366f1",
+              borderRadius: 8,
+              marginLeft: 8,
+              transition: "background 0.2s, transform 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#4f46e5";
+              e.currentTarget.style.transform = "scale(1.03)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "#6366f1";
+              e.currentTarget.style.transform = "scale(1)";
+            }}
+          >
+            Hire Me
+          </a>
         </div>
 
-        {isMobileMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 items-center text-center">
-              <a
-                href="#projects"
-                className="text-gray-400 dark:text-white hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Project
-              </a>
-              <a
-                href="#capabilities"
-                className="text-gray-400 dark:text-white hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Capabilities
-              </a>
-              <a
-                href="#contact"
-                className="text-gray-400 dark:text-white hover:text-blue-500 block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Contact
-              </a>
-            </div>
-          </div>
-        )}
-      </nav>
-    </>
+        {/* Mobile Hamburger */}
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          style={{
+            display: "none",
+            background: "transparent",
+            border: "none",
+            cursor: "pointer",
+            color: "#94a3b8",
+            padding: 6,
+          }}
+          className="nav-hamburger"
+        >
+          {isMobileMenuOpen ? (
+            <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width={24} height={24}>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width={24} height={24}>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          )}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div
+          style={{
+            background: "rgba(9,11,22,0.97)",
+            borderTop: "1px solid rgba(99,102,241,0.15)",
+            padding: "1rem clamp(1rem, 5vw, 3rem)",
+          }}
+          className="nav-mobile"
+        >
+          {links.map((l) => (
+            <a
+              key={l}
+              href={`#${l.toLowerCase()}`}
+              onClick={() => setIsMobileMenuOpen(false)}
+              style={{
+                display: "block",
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: "1rem",
+                fontWeight: 500,
+                color: "#94a3b8",
+                textDecoration: "none",
+                padding: "10px 0",
+                borderBottom: "1px solid rgba(255,255,255,0.05)",
+                transition: "color 0.2s",
+              }}
+              onMouseEnter={(e) => (e.target.style.color = "#f1f5f9")}
+              onMouseLeave={(e) => (e.target.style.color = "#94a3b8")}
+            >
+              {l}
+            </a>
+          ))}
+          <a
+            href="mailto:kumarvishwajeet076@gmail.com"
+            style={{
+              display: "inline-block",
+              marginTop: "1rem",
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: "0.9rem",
+              fontWeight: 600,
+              color: "#f1f5f9",
+              textDecoration: "none",
+              padding: "9px 22px",
+              background: "#6366f1",
+              borderRadius: 8,
+            }}
+          >
+            Hire Me
+          </a>
+        </div>
+      )}
+
+      <style>{`
+        @media (max-width: 768px) {
+          .nav-desktop { display: none !important; }
+          .nav-hamburger { display: block !important; }
+        }
+      `}</style>
+    </nav>
   );
 };
 

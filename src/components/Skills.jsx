@@ -1,102 +1,137 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const skills = {
+  Frontend: ["Angular", "React", "React Native", "Next.js", "Redux Toolkit", "Tailwind CSS", "TypeScript", "JavaScript", "HTML/CSS"],
+  Backend: ["Spring Boot", "Node.js", "Express.js", "WebSocket", "REST APIs", "Microservices", "RBAC"],
+  Mobile: ["Flutter", "Dart", "Android", "FCM Push Notifications", "Riverpod", "Hive"],
+  "DB & Cloud": ["MongoDB", "MySQL", "Redis", "AWS S3", "AWS CDN", "Docker", "Firebase"],
+  "AI & Tools": ["Ollama", "Mistral", "ChatGPT API", "Google Translation API", "Git", "Figma", "Postman", "Linux (Ubuntu)"],
+};
+
 const Skills = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Web");
-
-  const skills = {
-    Web: [
-      "ReactJS",
-      "Angular",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "MongoDB",
-      "NodeJS",
-      "ExpressJS",
-      "Spring Boot",
-      "MySQL",
-      "TypeScript",
-    ],
-    App: ["Flutter", "Dart", "Kotlin"],
-    Others: [
-      "Figma",
-      "GitHub",
-      "VS Code",
-      "Android Studio",
-      "IntelliJ IDEA",
-      "Postman",
-      "Firebase",
-    ],
-  };
-
-  const handleCategoryChange = (category) => {
-    if (category !== selectedCategory) {
-      setSelectedCategory(category);
-    }
-  };
+  const [selectedCategory, setSelectedCategory] = useState("Frontend");
 
   return (
-    <motion.div
-      className="max-w-7xl mx-auto px-4 py-12"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
+    <section
+      id="skills"
+      style={{
+        padding: "5rem clamp(1rem, 5vw, 3rem)",
+        background: "rgba(99,102,241,0.03)",
+        borderTop: "1px solid rgba(255,255,255,0.05)",
+        borderBottom: "1px solid rgba(255,255,255,0.05)",
+      }}
     >
-      <div className="text-center mb-10">
-        <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">
-          Skills & Technologies
-        </h1>
-        <p className="text-gray-600 dark:text-gray-300 mt-2">
-          Technologies I work with across web, mobile & tooling.
-        </p>
-      </div>
-
-      {/* Category Tabs */}
-      <div className="flex justify-center mb-8 space-x-4">
-        {["Web", "App", "Others"].map((category) => (
-          <button
-            key={category}
-            onClick={() => handleCategoryChange(category)}
-            className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 border ${
-              selectedCategory === category
-                ? "bg-blue-600 text-white border-blue-600 shadow-md"
-                : "bg-white dark:bg-gray-700 dark:text-white text-gray-800 border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600"
-            }`}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
-
-      {/* Skill Cards */}
-      <AnimatePresence mode="wait">
+      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+        {/* Section Title */}
         <motion.div
-          key={selectedCategory}
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-2 sm:px-4"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 0.4 }}
+          style={{ textAlign: "center", marginBottom: "3rem" }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
         >
-          {skills[selectedCategory].map((skill, index) => (
-            <motion.div
-              key={index}
-              className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm hover:shadow-lg transition-shadow duration-300 flex items-center justify-center text-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
+          <h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: "clamp(2rem, 4vw, 2.75rem)", fontWeight: 800, color: "#f1f5f9", margin: 0, letterSpacing: "-0.03em" }}>
+            Skills & Technologies
+          </h2>
+          <div style={{ width: 48, height: 3, background: "#6366f1", margin: "12px auto 0", borderRadius: 99 }} />
+          <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "1rem", color: "#64748b", marginTop: "1rem" }}>
+            Technologies I work with across web, mobile, cloud & AI.
+          </p>
+        </motion.div>
+
+        {/* Category Tabs */}
+        <motion.div
+          style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "0.5rem", marginBottom: "2.5rem" }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          viewport={{ once: true }}
+        >
+          {Object.keys(skills).map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: "0.875rem",
+                fontWeight: 600,
+                color: selectedCategory === cat ? "#f1f5f9" : "#475569",
+                background: selectedCategory === cat ? "#6366f1" : "rgba(255,255,255,0.03)",
+                border: `1px solid ${selectedCategory === cat ? "#6366f1" : "rgba(255,255,255,0.07)"}`,
+                padding: "8px 18px",
+                borderRadius: 99,
+                cursor: "pointer",
+                transition: "all 0.2s",
+              }}
+              onMouseEnter={(e) => {
+                if (selectedCategory !== cat) {
+                  e.currentTarget.style.borderColor = "rgba(99,102,241,0.4)";
+                  e.currentTarget.style.color = "#94a3b8";
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (selectedCategory !== cat) {
+                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.07)";
+                  e.currentTarget.style.color = "#475569";
+                }
+              }}
             >
-              <span className="text-sm font-medium text-gray-800 dark:text-white">
-                {skill}
-              </span>
-            </motion.div>
+              {cat}
+            </button>
           ))}
         </motion.div>
-      </AnimatePresence>
-    </motion.div>
+
+        {/* Skill Cards */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={selectedCategory}
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "0.75rem",
+              justifyContent: "center",
+              minHeight: 120,
+            }}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.3 }}
+          >
+            {skills[selectedCategory].map((skill, index) => (
+              <motion.div
+                key={skill}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: index * 0.04 }}
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: "0.9rem",
+                  fontWeight: 500,
+                  color: "#c7d2fe",
+                  background: "rgba(99,102,241,0.1)",
+                  border: "1px solid rgba(99,102,241,0.25)",
+                  padding: "10px 20px",
+                  borderRadius: 10,
+                  transition: "background 0.2s, transform 0.2s",
+                  cursor: "default",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "rgba(99,102,241,0.25)";
+                  e.currentTarget.style.transform = "translateY(-3px)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "rgba(99,102,241,0.1)";
+                  e.currentTarget.style.transform = "translateY(0)";
+                }}
+              >
+                {skill}
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
+      </div>
+    </section>
   );
 };
 
