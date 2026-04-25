@@ -91,9 +91,11 @@ const Profile = () => {
             <Typewriter
               options={{
                 strings: [
-                  "Full Stack Developer",
-                  "Software Development Engineer",
-                  "Android Developer"
+                  "Full Stack Developer 💻",
+                  "Android App Developer 📱",
+                  "Building Scalable Web Apps",
+                  "Code. Debug. Repeat.",
+                  "From UI to Backend ⚙️"
                 ],
                 autoStart: true,
                 loop: true,
